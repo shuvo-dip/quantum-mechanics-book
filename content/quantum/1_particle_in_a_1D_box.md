@@ -9,7 +9,7 @@ kernelspec:
 ---
 
 (ch-pib)=
-# The Particle in a 1D Box
+# A Particle in a 1D Box
 
 Quantum mechanics governs the behaviour of matter at the smallest scales — atoms, electrons, and molecules. Unlike classical mechanics, where a particle can sit at rest with zero energy, quantum mechanics reveals a world of discrete energy levels, wave-like behaviour, and irreducible uncertainty. In this chapter we build the foundational tools to understand quantum mechanics and apply them to the simplest possible confined system: a particle trapped in a one-dimensional box.
 
