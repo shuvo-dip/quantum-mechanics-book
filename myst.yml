@@ -1,16 +1,22 @@
 version: 1
 
 project:
-  title: Introduction to Quantum Mechanics
+  title: Teaching Materials
 
   authors:
     - name: Subhadip Biswas
-
-  description: Interactive notes on quantum mechanics with visualizations, simulations, and computational examples.
-
-  numbering: false
-  copyright: © Subhadip Biswas, CC BY-NC-SA 4.0
+  github: https://github.com/shuvo-dip/quantum-mechanics-book
+  copyright: © Subhadip Biswas, CC BY-NC-SA 4.0, CC BY NC 4.0
   date: 2026-04-17 # first official release
+
+  numbering:
+  description: This book provides an introduction for undergraduate students to the fundamental ideas of quantum mechanics. As one of the core pillars of modern physics, quantum theory underlies a wide range of phenomena, from atomic structure to emerging quantum technologies. However, at the beginning of their studies, students often lack the full mathematical background required to rigorously approach the subject. Rather than viewing this as a limitation, this book uses it as an opportunity to introduce the necessary mathematics alongside the physics, highlighting both its meaning and practical relevance. The aim is to develop an intuitive and conceptual understanding of quantum mechanics from the outset, guiding students through the framework of the theory and the reasoning behind it. What is a wavefunction, and how should it be interpreted? Why does probability play a central role? What lies behind the Schrödinger equation, and how does it describe physical reality? Through these questions, the book seeks to build a solid foundation for further study in quantum physics.
+
+  jupyter:
+    binder:
+      repo: https://github.com/
+
+
 
 
 extends:
@@ -18,10 +24,31 @@ extends:
   - plugins.yml
   - export.yml
 
+
+
 site:
   options:
+    logo: content/images/shuvo_logo.png
+    favicon: content/images/favicon.ico
     folders: true
     hide_authors: true
+    enable_service_worker: false
     execute_js: true
+    style: ./style/custom.css
+
+  actions:
+    - title: Feedback
+      url: https://shuvo-dip.github.io/
+    - title: PDF 
+      url: exports/quantum_mechanics.pdf
 
   template: book-theme
+
+
+# site:
+#   options:
+#     folders: true
+#     hide_authors: true
+#     execute_js: true
+
+#   template: book-theme

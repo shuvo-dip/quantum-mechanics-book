@@ -48,7 +48,9 @@ This site is built using **Jupyter Book / MyST**.
 Content is intended for educational use. Licensing will be updated later.
 
 ---
-
 ## 📧 Contact
 
-Subhadip Biswas
+**Subhadip Biswas**  
+🌐 Website: https://shuvo-dip.github.io/  
+💻 GitHub: https://github.com/shuvo-dip  
+📧 Email: subhadip.biswas@cnrs.fr

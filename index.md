@@ -22,7 +22,7 @@ Introduction to Quantum Mechanics
 </div>
 
 <div style="text-align: center; font-size: 18px; margin-top: 10px;">
-Wave • Probability • Measurement • Reality
+Uncertainty Principle • Harmonic Oscillator • Particle in a box • Probability
 </div>
 
 ```{figure} quantum_cover.gif
