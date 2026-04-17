@@ -36,9 +36,12 @@ site:
     execute_js: true
     style: ./style/custom.css
   head: |
-    <script data-goatcounter="https://quantum-book.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
-            
+    <script
+      data-goatcounter="https://quantum-book.goatcounter.com/count"
+      data-goatcounter-settings='{"allow_local": true}'
+      async
+      src="//gc.zgo.at/count.js"></script>
+
   actions:
     - title: Feedback
       url: https://shuvo-dip.github.io/
