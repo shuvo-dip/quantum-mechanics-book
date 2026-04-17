@@ -206,7 +206,7 @@ Every problem in quantum mechanics follows the same systematic procedure. We str
 
 ::::{tab-set}
 
-:::{tab-item} Step 1: Write $$\hat{H}$$
+:::{tab-item} Step 1: Write Hamiltonian
 Identify the potential $V(x)$ for the system and write down the Hamiltonian:
 $$\hat{H} = -\frac{\hbar^2}{2m}\frac{d^2}{dx^2} + V(x)$$
 :::
@@ -227,7 +227,7 @@ Use physical requirements (continuity, normalisation, behaviour at $\pm\infty$) 
 Find the normalisation constant $A$ such that $\int |\psi_n|^2 dx = 1$.
 :::
 
-:::{tab-item} Step 6: Find $E_n$ and $\psi_n$
+:::{tab-item} Step 6: Find Enery and Wave Fn
 Write out the complete set of energy eigenvalues and eigenfunctions.
 :::
 
