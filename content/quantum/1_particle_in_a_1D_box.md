@@ -206,7 +206,7 @@ Every problem in quantum mechanics follows the same systematic procedure. We str
 
 ::::{tab-set}
 
-:::{tab-item} Step 1: Write $\hat{H}$
+:::{tab-item} Step 1: Write $$\hat{H}$$
 Identify the potential $V(x)$ for the system and write down the Hamiltonian:
 $$\hat{H} = -\frac{\hbar^2}{2m}\frac{d^2}{dx^2} + V(x)$$
 :::
