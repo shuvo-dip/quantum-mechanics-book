@@ -12,9 +12,9 @@ project:
   numbering:
   description: This book provides an introduction for undergraduate students to the fundamental ideas of quantum mechanics. As one of the core pillars of modern physics, quantum theory underlies a wide range of phenomena, from atomic structure to emerging quantum technologies. However, at the beginning of their studies, students often lack the full mathematical background required to rigorously approach the subject. Rather than viewing this as a limitation, this book uses it as an opportunity to introduce the necessary mathematics alongside the physics, highlighting both its meaning and practical relevance. The aim is to develop an intuitive and conceptual understanding of quantum mechanics from the outset, guiding students through the framework of the theory and the reasoning behind it. What is a wavefunction, and how should it be interpreted? Why does probability play a central role? What lies behind the Schrödinger equation, and how does it describe physical reality? Through these questions, the book seeks to build a solid foundation for further study in quantum physics.
 
-  jupyter:
-    binder:
-      repo: https://github.com/
+  # jupyter:
+  #   binder:
+  #     repo: https://github.com/
 
 
 
