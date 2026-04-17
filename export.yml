@@ -1,0 +1,15 @@
+version: 1
+
+project:
+  exports:
+    - format: typst
+      template: https://github.com/myst-templates/plain_typst_book.git 
+      output: exports/quantum_mechanics.pdf
+      id: pdf
+
+      papersize: a4
+      margin_top: 2
+      margin_bottom: 2
+      margin_left: 10%
+      margin_right: 10%
+      show_pagenumber: true

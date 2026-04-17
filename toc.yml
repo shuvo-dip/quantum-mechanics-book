@@ -1,0 +1,24 @@
+version: 1
+project:
+  toc:
+    - file: index.md
+    - file: content/Credits.md      
+      
+    - file: content/quantum/Quantum_Mechanics.md
+      children:    
+        - file: content/quantum/1_particle_in_a_1D_box.md
+          children:
+            - file: content/quantum/1_particle_in_a_1D_box.ipynb   
+
+    # - title: Project
+    #   children:
+    #     - file: content/project/Deeltjes.ipynb
+
+    # - file: content/howto/Fordevelopers.md
+    #   children:
+    #     - file: content/howto/Howtostart.md
+    #     - file: content/howto/Cheatsheet.md
+    #     - file: content/howto/test.ipynb
+    #     - file: content/howto/test2.md
+    #     - file: content/howto/GHGL.md
+        

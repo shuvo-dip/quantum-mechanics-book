@@ -1,0 +1,27 @@
+version: 1
+
+project:
+  title: Introduction to Quantum Mechanics
+
+  authors:
+    - name: Subhadip Biswas
+
+  description: Interactive notes on quantum mechanics with visualizations, simulations, and computational examples.
+
+  numbering: false
+  copyright: © Subhadip Biswas, CC BY-NC-SA 4.0
+  date: 2026-04-17 # first official release
+
+
+extends:
+  - toc.yml
+  - plugins.yml
+  - export.yml
+
+site:
+  options:
+    folders: true
+    hide_authors: true
+    execute_js: true
+
+  template: book-theme

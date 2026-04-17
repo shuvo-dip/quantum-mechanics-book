@@ -1,0 +1,5 @@
+Wat te doen bij nieuwe publish
+
+* verhogen van versie nummer
+* checken toc
+* ...
