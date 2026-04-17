@@ -17,8 +17,6 @@ project:
   #     repo: https://github.com/
 
 
-
-
 extends:
   - toc.yml
   - plugins.yml
