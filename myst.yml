@@ -22,8 +22,6 @@ extends:
   - plugins.yml
   - export.yml
 
-
-
 site:
   options:
     logo: content/images/shuvo_logo.png
@@ -33,10 +31,9 @@ site:
     enable_service_worker: false
     execute_js: true
     style: ./style/custom.css
-
-    scripts:
-      - content/js/goatcounter.js
-
+  head: |
+     <script data-goatcounter="https://quantum-book.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
 
 
   actions:
