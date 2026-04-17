@@ -23,6 +23,7 @@ extends:
   - export.yml
 
 site:
+  template: book-theme
   options:
     logo: content/images/shuvo_logo.png
     favicon: content/images/favicon.ico
@@ -42,11 +43,6 @@ site:
     - title: PDF 
       url: exports/quantum_mechanics.pdf
 
-  template: book-theme
-
-sphinx:
-  config:
-    templates_path: ["_templates"]
 # site:
 #   options:
 #     folders: true
