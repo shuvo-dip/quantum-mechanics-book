@@ -44,7 +44,9 @@ site:
 
   template: book-theme
 
-
+sphinx:
+  config:
+    templates_path: ["_templates"]
 # site:
 #   options:
 #     folders: true
