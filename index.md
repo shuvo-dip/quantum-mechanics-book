@@ -14,7 +14,9 @@ numbering:
     enabled: false
 no-update-date: true
 ---
-
+<script data-goatcounter="https://quantum-book.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+        
 <div style="text-align: center; font-size: 28px; font-weight: bold;">
 
 Introduction to Quantum Mechanics
@@ -29,3 +31,5 @@ Uncertainty Principle • Harmonic Oscillator • Particle in a box • Probabil
 :width: 80%
 :align: center
 :alt: Quantum Mechanics Cover
+
+
