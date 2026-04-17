@@ -38,7 +38,7 @@ site:
 
   actions:
     - title: Feedback
-      url: https://shuvo-dip.github.io/
+      url: https://shuvo-dip.github.io/quantum-mechanics-book/content/quantum/particle-in-a-1d-box/
     - title: PDF 
       url: exports/quantum_mechanics.pdf
 
