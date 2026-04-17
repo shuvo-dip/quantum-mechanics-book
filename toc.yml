@@ -2,7 +2,7 @@ version: 1
 project:
   toc:
     - file: index.md
-    - file: content/Credits.md      
+    # - file: content/Credits.md      
       
     - file: content/quantum/Quantum_Mechanics.md
       children:    

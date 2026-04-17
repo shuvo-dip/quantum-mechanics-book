@@ -3,7 +3,7 @@ version: 1
 project:
   exports:
     - format: typst
-      template: https://github.com/myst-templates/plain_typst_book.git 
+      template: https://github.com/myst-templates/plain_typst_book.git
       output: exports/quantum_mechanics.pdf
       id: pdf
 
