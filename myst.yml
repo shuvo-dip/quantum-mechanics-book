@@ -35,9 +35,6 @@ site:
     enable_service_worker: false
     execute_js: true
     style: ./style/custom.css
-  head: |
-    <script data-goatcounter="https://quantum-book.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
 
   actions:
     - title: Feedback
