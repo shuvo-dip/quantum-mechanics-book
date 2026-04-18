@@ -1021,7 +1021,7 @@ All these systems reuse the same roadmap and the same conceptual tools developed
 
 +++ { "page-break": true }
 +++
-```{Suggested Books}
+```{Important} Suggested Books
 
 - H. C. Verma, *Quantum Physics* (Surya Publications)  
 - R. P. Feynman, R. B. Leighton, and M. Sands, *The Feynman Lectures on Physics*, Vol. 3 (Narosa Publishing)  
