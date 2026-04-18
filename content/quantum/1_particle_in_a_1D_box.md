@@ -391,19 +391,6 @@ The energies scale as $n^2$: the second level has four times the energy of the f
 +++
 
 
-```{figure} ./images/QM_teaching_3.gif
-:width: 99%
-:label: fig_superposition
-:alt: 
-This animation illustrates the fundamental idea of time evolution in quantum mechanics using a particle confined in a one-dimensional infinite potential well of width $a$.
-We begin by visualizing the first two stationary eigenstates, $ \psi_1(x,t) $ and $ \psi_2(x,t) $. Individually, these states exhibit only a time-dependent phase (represented here through oscillatory modulation), and their probability densities remain static in time.
-Next, we construct a superposition of these states:
-$\psi(x,t) = \psi_1(x)e^{-iE_1 t} + \psi_2(x)e^{-iE_2 t}.$
-Unlike individual eigenstates, the superposition leads to non-trivial time evolution. The interference between the two states generates a dynamically evolving wave pattern inside the well.
-Finally, we examine the observable quantity, the probability density:
-$|\psi(x,t)|^2.$ Here, the time dependence becomes physically meaningful — the probability distribution oscillates within the well, demonstrating how quantum dynamics emerge from superposition.
-*[Visualization by Subhadip Biswas. Generated using [Manim](https://www.manim.community/).]*
-```
 (ch_pib_s_properties)=
 ## Properties of the Solutions
 
@@ -975,6 +962,21 @@ plt.show()
 The probability density **sloshes** back and forth between the two halves of the box with the beat period $T_{beat} = 2\pi\hbar/(E_2 - E_1) = 2\pi\hbar/(3E_1)$. This is a purely quantum interference effect with no classical analogue. A stationary state ($c_n = 1$ for one $n$, all others zero) would show no time-dependence in $|\psi|^2$.
 
 ````
+
+
+```{figure} ./images/QM_teaching_3.gif
+:width: 99%
+:label: fig_superposition
+:alt: 
+This animation illustrates the fundamental idea of time evolution in quantum mechanics using a particle confined in a one-dimensional infinite potential well of width $a$.
+We begin by visualizing the first two stationary eigenstates, $ \psi_1(x,t) $ and $ \psi_2(x,t) $. Individually, these states exhibit only a time-dependent phase (represented here through oscillatory modulation), and their probability densities remain static in time.
+Next, we construct a superposition of these states:
+$\psi(x,t) = \psi_1(x)e^{-iE_1 t} + \psi_2(x)e^{-iE_2 t}.$
+Unlike individual eigenstates, the superposition leads to non-trivial time evolution. The interference between the two states generates a dynamically evolving wave pattern inside the well.
+Finally, we examine the observable quantity, the probability density:
+$|\psi(x,t)|^2.$ Here, the time dependence becomes physically meaningful — the probability distribution oscillates within the well, demonstrating how quantum dynamics emerge from superposition.
+*[Visualization by Subhadip Biswas. Generated using [Manim](https://www.manim.community/).]*
+```
 
 +++ { "page-break": true }
 +++
