@@ -1,0 +1,171 @@
+%%manim -qh -r 1920,1080 --fps 60 -v WARNING ParticleInABox_Part1
+
+from manim import *
+import numpy as np
+
+class ParticleInABox_Part1(Scene):
+    def construct(self):
+
+        # --- WELL SETUP ---
+        well_depth = 3
+
+        left_wall = Line(LEFT*4 + DOWN*well_depth, LEFT*4 + UP*1)
+        right_wall = Line(RIGHT*4 + DOWN*well_depth, RIGHT*4 + UP*1)
+        bottom = Line(LEFT*4 + DOWN*well_depth, RIGHT*4 + DOWN*well_depth)
+
+        box = VGroup(left_wall, right_wall, bottom)
+
+        well_height = well_depth + 1
+
+        left_region = Rectangle(
+            width=3, height=well_height,
+            fill_color=GREY, fill_opacity=0.5, stroke_width=0
+        ).next_to(left_wall, LEFT, buff=0).align_to(left_wall, DOWN)
+
+        right_region = Rectangle(
+            width=3, height=well_height,
+            fill_color=GREY, fill_opacity=0.5, stroke_width=0
+        ).next_to(right_wall, RIGHT, buff=0).align_to(right_wall, DOWN)
+
+        V_inside = MathTex("V = 0").move_to(DOWN*1.5)
+        V_left = MathTex("V = \\infty").next_to(left_wall, UP)
+        V_right = MathTex("V = \\infty").next_to(right_wall, UP)
+
+        arrow = DoubleArrow(
+            bottom.get_start(), bottom.get_end(),
+            buff=0.01, max_tip_length_to_length_ratio=0.02
+        ).shift(DOWN*0.5)
+
+        arrow.set_stroke(width=3).set_color(YELLOW)
+
+        label_a = MathTex("a").set_color(YELLOW)
+        label_a.move_to(arrow.get_center() + UP*0.3)
+
+        self.add(left_region, right_region, box, V_inside, V_left, V_right, arrow, label_a)
+
+        # --- TITLE ---
+        title_text = Text("Time-Dependent Superposition", font_size=32)
+        title_eq = MathTex(
+            r"\psi(x,t)=\psi_1 e^{-iE_1 t}+\psi_2 e^{-iE_2 t}"
+        ).scale(0.7)
+
+        title_group = VGroup(title_text, title_eq).arrange(DOWN, buff=0.2).to_edge(UP)
+        self.play(Write(title_group))
+
+        # ==============================
+        # 🔹 TIME-DEPENDENT ψ1, ψ2
+        # ==============================
+
+        y_base = -1.2
+        x_vals = np.linspace(-4, 4, 200)
+
+        t_ind = ValueTracker(0)
+
+        def psi1_func(x):
+            return np.sin(np.pi*(x+4)/8) * np.cos(1 * t_ind.get_value())
+
+        def psi2_func(x):
+            return np.sin(2*np.pi*(x+4)/8) * np.cos(4 * t_ind.get_value())
+
+        psi1_wave = always_redraw(lambda: VMobject(color=BLUE).set_points_smoothly([
+            np.array([xi, 0.8*psi1_func(xi) + y_base, 0])
+            for xi in x_vals
+        ]).set_stroke(width=3).set_opacity(0.6))
+
+        psi2_wave = always_redraw(lambda: VMobject(color=YELLOW).set_points_smoothly([
+            np.array([xi, 0.8*psi2_func(xi) + y_base, 0])
+            for xi in x_vals
+        ]).set_stroke(width=3).set_opacity(0.6))
+
+        psi1_label = MathTex(r"\psi_1(x,t)").scale(0.6).next_to(LEFT*3.5 + y_base*UP, UP)
+        psi2_label = MathTex(r"\psi_2(x,t)").scale(0.6).next_to(RIGHT*3.5 + y_base*UP, UP)
+
+        self.add(psi1_wave, psi2_wave)
+        self.play(Write(psi1_label), Write(psi2_label))
+
+        # Animate individual oscillations
+        self.play(t_ind.animate.set_value(2*PI), run_time=3, rate_func=linear)
+
+        self.wait(1)
+
+        # ==============================
+        # 🔥 SUPERPOSITION (MOVING)
+        # ==============================
+
+        self.play(FadeOut(psi1_label), FadeOut(psi2_label))
+
+        # remove individual waves
+        self.play(FadeOut(psi1_wave), FadeOut(psi2_wave))
+
+        t = ValueTracker(0)
+
+        def psi_super(x):
+            L = 8
+            x_shift = x + 4
+
+            psi1 = np.sin(np.pi * x_shift / L)
+            psi2 = np.sin(2 * np.pi * x_shift / L)
+
+            return psi1*np.cos(t.get_value()) + psi2*np.sin(t.get_value())
+
+        wave_super = always_redraw(lambda: VMobject(color=RED).set_points_smoothly([
+            np.array([xi, 0.8*psi_super(xi) + y_base, 0])
+            for xi in x_vals
+        ]).set_stroke(width=3))
+
+        self.add(wave_super)
+
+        # Animate superposition
+        self.play(
+            t.animate.set_value(6*PI),
+            run_time=4,
+            rate_func=linear
+        )
+
+        self.wait(1)
+
+        # Remove before next section
+        self.play(FadeOut(wave_super))
+
+        # ==============================
+        # 🔥 PROBABILITY DENSITY
+        # ==============================
+
+        time_title = MathTex(r"|\psi(x,t)|^2").scale(0.7)
+
+        self.play(Transform(
+            title_group,
+            VGroup(
+                Text("Time Evolution", font_size=32),
+                time_title
+            ).arrange(DOWN, buff=0.2).to_edge(UP)
+        ))
+
+        t_prob = ValueTracker(0)
+
+        def psi_super_prob(x):
+            L = 8
+            x_shift = x + 4
+
+            psi1 = np.sin(np.pi * x_shift / L)
+            psi2 = np.sin(2 * np.pi * x_shift / L)
+
+            return psi1*np.cos(t_prob.get_value()) + psi2*np.sin(t_prob.get_value())
+
+        def prob(x):
+            return 0.6 * psi_super_prob(x)**2
+
+        wave_prob = always_redraw(lambda: VMobject(color=GREEN).set_points_smoothly([
+            np.array([xi, prob(xi) + y_base, 0])
+            for xi in x_vals
+        ]).set_stroke(width=3))
+
+        self.add(wave_prob)
+
+        self.play(
+            t_prob.animate.set_value(6*PI),
+            run_time=6,
+            rate_func=linear
+        )
+
+        self.wait(2)

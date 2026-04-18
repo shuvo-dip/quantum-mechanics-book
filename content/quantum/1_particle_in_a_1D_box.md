@@ -300,6 +300,7 @@ $$V(x) = \begin{cases} 0 & 0 \leq x \leq a \\ \infty & x < 0 \text{ or } x > a \
 :label: fig_well
 :alt: 
 A schematic representation highlighting the differences between classical and quantum descriptions of a particle in an infinite potential well.
+*Visualization by Subhadip Biswas. Generated using [Manim](https://www.manim.community/).*
 ```
 
 **Physical interpretation:** The infinite walls prevent the particle from ever being outside the box. Inside the box, the particle moves freely.
@@ -369,6 +370,7 @@ $$\boxed{\psi_n(x) = \sqrt{\frac{2}{a}}\sin\!\left(\frac{n\pi x}{a}\right), \qua
 :label: fig_stationary
 :alt: 
 Schematic of an infinite potential well displaying the stationary wavefunction $\psi_n(x)$ and the associated probability density $|\psi_n(x)|^2$.
+*Visualization by Subhadip Biswas. Generated using [Manim](https://www.manim.community/).*
 
 ```
 
@@ -388,6 +390,31 @@ The energies scale as $n^2$: the second level has four times the energy of the f
 +++ { "page-break": true }
 +++
 
+
+```{figure} ./images/QM_teaching_3.gif
+:width: 99%
+:label: fig_superposition
+:alt: 
+This animation illustrates the fundamental idea of time evolution in quantum mechanics using a particle confined in a one-dimensional infinite potential well of width \(a\).
+
+We begin by visualizing the first two stationary eigenstates, \( \psi_1(x,t) \) and \( \psi_2(x,t) \). Individually, these states exhibit only a time-dependent phase (represented here through oscillatory modulation), and their probability densities remain static in time.
+
+Next, we construct a superposition of these states:
+\[
+\psi(x,t) = \psi_1(x)e^{-iE_1 t} + \psi_2(x)e^{-iE_2 t}.
+\]
+Unlike individual eigenstates, the superposition leads to non-trivial time evolution. The interference between the two states generates a dynamically evolving wave pattern inside the well.
+
+Finally, we examine the observable quantity, the probability density:
+\[
+|\psi(x,t)|^2.
+\]
+Here, the time dependence becomes physically meaningful — the probability distribution oscillates within the well, demonstrating how quantum dynamics emerge from superposition.
+
+This animation highlights a key principle of quantum mechanics:
+> *While individual stationary states do not evolve in their probability distributions, their superpositions give rise to observable dynamics.*
+*Visualization by Subhadip Biswas. Generated using [Manim](https://www.manim.community/).*
+```
 (ch_pib_s_properties)=
 ## Properties of the Solutions
 

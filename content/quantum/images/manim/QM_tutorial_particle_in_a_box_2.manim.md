@@ -128,3 +128,60 @@ class ParticleInABox_Part1(Scene):
         for g in all_states:
             self.play(Create(g))
             self.wait(2)
+
+        self.wait(1)
+        prob_states = VGroup()
+
+        for i, n in enumerate(n_values):
+        
+            y_shift = levels_y[i]
+        
+            # probability density
+            def prob_n(x, n=n):
+                return 0.6 * (np.sin(n * np.pi * (x+4)/8))**2
+        
+            x_vals = np.linspace(-4, 4, 200)
+        
+            prob_wave = VMobject(color=GREEN)
+            points = [
+                np.array([xi, prob_n(xi) + y_shift, 0])
+                for xi in x_vals
+            ]
+            prob_wave.set_points_smoothly(points)
+            prob_wave.set_stroke(width=2)
+        
+            prob_states.add(prob_wave)
+          
+        prob_exprs = []
+        for n in n_values:
+        
+            prob_expr = MathTex(
+                rf"|\psi_{n}(x)|^2=\frac{{2}}{{a}}\sin^2\left(\frac{{{n}\pi x}}{{a}}\right)"
+            ).scale(0.5)
+        
+            prob_exprs.append(prob_expr)
+        for i, g in enumerate(all_states):
+            prob_exprs[i].move_to(g[3].get_center())
+        original_exprs = [g[3] for g in all_states]
+
+      
+        new_title_eq = MathTex(
+            r"|\psi_n(x)|^2"
+        ).scale(0.7)
+        
+        new_title_group = VGroup(title_text, new_title_eq).arrange(DOWN, buff=0.2).to_edge(UP)
+        original_waves = [g[1] for g in all_states]
+        self.play(
+              Transform(title_group, new_title_group),   # ✅ add this
+              *[
+                  Transform(original_waves[i], prob_states[i])
+                  for i in range(len(original_waves))
+              ],
+              *[
+                  Transform(original_exprs[i], prob_exprs[i])
+                  for i in range(len(original_exprs))
+              ],
+              run_time=3
+         )
+          
+        self.wait(2)
