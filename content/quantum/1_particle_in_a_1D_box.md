@@ -295,9 +295,12 @@ The potential is:
 $$V(x) = \begin{cases} 0 & 0 \leq x \leq a \\ \infty & x < 0 \text{ or } x > a \end{cases}$$
 
 
-<video controls autoplay loop muted style="width:80%; display:block; margin:auto;">
-  <source src="./images/QM_teaching_1.mp4" type="video/mp4">
-</video>
+```{figure} ./images/QM_teaching_1.gif
+:width: 99%
+:label: fig_well
+:alt: 
+A video of Classical and Quantum description of particle and wave in an infinite potential well.
+```
 
 **Physical interpretation:** The infinite walls prevent the particle from ever being outside the box. Inside the box, the particle moves freely.
 
@@ -360,9 +363,14 @@ $$A^2 \int_0^a \frac{1}{2}\left[1 - \cos\!\left(\frac{2n\pi x}{a}\right)\right] 
 Therefore $A = \sqrt{2/a}$, and the **normalised eigenfunctions** are:
 
 $$\boxed{\psi_n(x) = \sqrt{\frac{2}{a}}\sin\!\left(\frac{n\pi x}{a}\right), \quad n = 1, 2, 3, \ldots}$$
-<video controls autoplay loop muted style="width:80%; display:block; margin:auto;">
-  <source src="./images/QM_teaching_2.mp4" type="video/mp4">
-</video>
+
+```{figure} ./images/QM_teaching_2.gif
+:width: 99%
+:label: fig_stationary
+:alt: 
+
+A video of stationary state of wave in an infinite potential well.
+```
 
 (ch_pib_ss_energies)=
 ### Energy Eigenvalues
