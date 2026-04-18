@@ -400,12 +400,8 @@ We begin by visualizing the first two stationary eigenstates, $ \psi_1(x,t) $ an
 Next, we construct a superposition of these states:
 $\psi(x,t) = \psi_1(x)e^{-iE_1 t} + \psi_2(x)e^{-iE_2 t}.$
 Unlike individual eigenstates, the superposition leads to non-trivial time evolution. The interference between the two states generates a dynamically evolving wave pattern inside the well.
-
 Finally, we examine the observable quantity, the probability density:
-$|\psi(x,t)|^2.$
-Here, the time dependence becomes physically meaningful — the probability distribution oscillates within the well, demonstrating how quantum dynamics emerge from superposition.
-This animation highlights a key principle of quantum mechanics:
-> *While individual stationary states do not evolve in their probability distributions, their superpositions give rise to observable dynamics.*
+$|\psi(x,t)|^2.$ Here, the time dependence becomes physically meaningful — the probability distribution oscillates within the well, demonstrating how quantum dynamics emerge from superposition.
 *Visualization by Subhadip Biswas. Generated using [Manim](https://www.manim.community/).*
 ```
 (ch_pib_s_properties)=
