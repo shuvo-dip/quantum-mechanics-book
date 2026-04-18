@@ -300,7 +300,7 @@ $$V(x) = \begin{cases} 0 & 0 \leq x \leq a \\ \infty & x < 0 \text{ or } x > a \
 :label: fig_well
 :alt: 
 A schematic representation highlighting the differences between classical and quantum descriptions of a particle in an infinite potential well.
-*Visualization by Subhadip Biswas. Generated using [Manim](https://www.manim.community/).*
+*[Visualization by Subhadip Biswas. Generated using [Manim](https://www.manim.community/).]*
 ```
 
 **Physical interpretation:** The infinite walls prevent the particle from ever being outside the box. Inside the box, the particle moves freely.
@@ -370,7 +370,7 @@ $$\boxed{\psi_n(x) = \sqrt{\frac{2}{a}}\sin\!\left(\frac{n\pi x}{a}\right), \qua
 :label: fig_stationary
 :alt: 
 Schematic of an infinite potential well displaying the stationary wavefunction $\psi_n(x)$ and the associated probability density $|\psi_n(x)|^2$.
-*Visualization by Subhadip Biswas. Generated using [Manim](https://www.manim.community/).*
+*[Visualization by Subhadip Biswas. Generated using [Manim](https://www.manim.community/).]*
 
 ```
 
@@ -402,7 +402,7 @@ $\psi(x,t) = \psi_1(x)e^{-iE_1 t} + \psi_2(x)e^{-iE_2 t}.$
 Unlike individual eigenstates, the superposition leads to non-trivial time evolution. The interference between the two states generates a dynamically evolving wave pattern inside the well.
 Finally, we examine the observable quantity, the probability density:
 $|\psi(x,t)|^2.$ Here, the time dependence becomes physically meaningful — the probability distribution oscillates within the well, demonstrating how quantum dynamics emerge from superposition.
-*Visualization by Subhadip Biswas. Generated using [Manim](https://www.manim.community/).*
+*[Visualization by Subhadip Biswas. Generated using [Manim](https://www.manim.community/).]*
 ```
 (ch_pib_s_properties)=
 ## Properties of the Solutions
