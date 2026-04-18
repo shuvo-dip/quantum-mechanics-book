@@ -1021,13 +1021,14 @@ All these systems reuse the same roadmap and the same conceptual tools developed
 
 +++ { "page-break": true }
 +++
+
 ```{important} Suggested Books
 
+- D. J. Griffiths, *Introduction to Quantum Mechanics*, 2nd Ed. (Pearson)  
 - H. C. Verma, *Quantum Physics* (Surya Publications)  
 - R. P. Feynman, R. B. Leighton, and M. Sands, *The Feynman Lectures on Physics*, Vol. 3 (Narosa Publishing)  
 - J. J. Sakurai, *Modern Quantum Mechanics* (Pearson)  
 - B. H. Bransden and C. J. Joachain, *Quantum Mechanics*, 2nd Ed. (Pearson Education)  
-- D. J. Griffiths, *Introduction to Quantum Mechanics*, 2nd Ed. (Pearson)  
 - P. A. M. Dirac, *The Principles of Quantum Mechanics*, 4th Ed. (Oxford Science Publications)  
 - C. Cohen-Tannoudji, *Quantum Mechanics*, Vols. I & II (John Wiley & Sons)  
 - R. Shankar, *Principles of Quantum Mechanics*, 2nd Ed. (Springer)  
