@@ -299,7 +299,7 @@ $$V(x) = \begin{cases} 0 & 0 \leq x \leq a \\ \infty & x < 0 \text{ or } x > a \
 :width: 99%
 :label: fig_well
 :alt: 
-A video of Classical and Quantum description of particle and wave in an infinite potential well.
+A schematic representation highlighting the differences between classical and quantum descriptions of a particle in an infinite potential well.
 ```
 
 **Physical interpretation:** The infinite walls prevent the particle from ever being outside the box. Inside the box, the particle moves freely.
@@ -368,8 +368,8 @@ $$\boxed{\psi_n(x) = \sqrt{\frac{2}{a}}\sin\!\left(\frac{n\pi x}{a}\right), \qua
 :width: 99%
 :label: fig_stationary
 :alt: 
+Schematic of an infinite potential well displaying the stationary wavefunction $\psi_n(x)$ and the associated probability density $|\psi_n(x)|^2$.
 
-A video of stationary state of wave in an infinite potential well.
 ```
 
 (ch_pib_ss_energies)=
